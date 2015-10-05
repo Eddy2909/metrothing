@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroThing", "MetroThing\MetroThing.csproj", "{8D6530C8-8BC5-4920-8108-7004277D2CD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncthingRestClient", "SyncthingRestClient\SyncthingRestClient.csproj", "{09A149A1-14C6-4435-807D-C99A7C9A6A3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncthingRestClientUnitTest", "SyncthingRestClientUnitTest\SyncthingRestClientUnitTest.csproj", "{906AEE02-82B9-4A7D-A4F5-64490007C31B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncthingCore", "SyncthingCore\SyncthingCore.csproj", "{251237F4-BA3B-45FB-A31A-D036247F9B81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncthingCoreUnitTest", "SyncthingCoreUnitTest\SyncthingCoreUnitTest.csproj", "{20EB4B58-5BE2-4272-ABA1-FBC29C6D5A63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{23A43C4C-BF43-4432-A039-EFE5C6EAFED6}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\nuget.exe = .nuget\nuget.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroThingSquirrel", "MetroThingSquirrel\MetroThingSquirrel.csproj", "{4434E0A8-6B8F-4719-813E-BCD51BB5F700}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D6530C8-8BC5-4920-8108-7004277D2CD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D6530C8-8BC5-4920-8108-7004277D2CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D6530C8-8BC5-4920-8108-7004277D2CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D6530C8-8BC5-4920-8108-7004277D2CD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A149A1-14C6-4435-807D-C99A7C9A6A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A149A1-14C6-4435-807D-C99A7C9A6A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A149A1-14C6-4435-807D-C99A7C9A6A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A149A1-14C6-4435-807D-C99A7C9A6A3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{906AEE02-82B9-4A7D-A4F5-64490007C31B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906AEE02-82B9-4A7D-A4F5-64490007C31B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906AEE02-82B9-4A7D-A4F5-64490007C31B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906AEE02-82B9-4A7D-A4F5-64490007C31B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{251237F4-BA3B-45FB-A31A-D036247F9B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251237F4-BA3B-45FB-A31A-D036247F9B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251237F4-BA3B-45FB-A31A-D036247F9B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{251237F4-BA3B-45FB-A31A-D036247F9B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20EB4B58-5BE2-4272-ABA1-FBC29C6D5A63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20EB4B58-5BE2-4272-ABA1-FBC29C6D5A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20EB4B58-5BE2-4272-ABA1-FBC29C6D5A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20EB4B58-5BE2-4272-ABA1-FBC29C6D5A63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4434E0A8-6B8F-4719-813E-BCD51BB5F700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4434E0A8-6B8F-4719-813E-BCD51BB5F700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4434E0A8-6B8F-4719-813E-BCD51BB5F700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4434E0A8-6B8F-4719-813E-BCD51BB5F700}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

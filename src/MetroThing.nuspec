@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>metrothing</id>
+        <version>0.2.57</version>
+        <title>metro.thing</title>
+        <authors>Adrian Rudnik</authors>
+        <projectUrl>https://github.com/kreischweide/metrothing</projectUrl>
+        <iconUrl>http://distribute.klonmaschine.de/metrothing/icon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>metro.thing is a Windows UI to connect Syncthing instances through their REST API.</description>
+        <releaseNotes>- Download queue can now be viewed by clicking on the download speed tile.
+- In the download queue, files can be pushed towards the top of the queue.
+- Connection latency should now be visible again in the connectivity tile tooltip.
+- CPU usage tile will now show the analysed crypt performance in MiB/s in the tooltip.
+- All rescan of all folders can now be triggered through the instance settings.
+- Fixed a rare racing condition when the connection was established but the instance is no longer monitored.</releaseNotes>
+    </metadata>
+    <files>
+        <file src="MetroThingSquirrel\bin\Release\DeltaCompressionDotNet.dll" target="lib\net45\DeltaCompressionDotNet.dll" />
+        <file src="MetroThingSquirrel\bin\Release\DeltaCompressionDotNet.MsDelta.dll" target="lib\net45\DeltaCompressionDotNet.MsDelta.dll" />
+        <file src="MetroThingSquirrel\bin\Release\DeltaCompressionDotNet.PatchApi.dll" target="lib\net45\DeltaCompressionDotNet.PatchApi.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Gma.QrCodeNet.Encoding.dll" target="lib\net45\Gma.QrCodeNet.Encoding.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Gma.QrCodeNet.Encoding.pdb" target="lib\net45\Gma.QrCodeNet.Encoding.pdb" />
+        <file src="MetroThingSquirrel\bin\Release\Gma.QrCodeNet.Encoding.xml" target="lib\net45\Gma.QrCodeNet.Encoding.xml" />
+        <file src="MetroThingSquirrel\bin\Release\ICSharpCode.SharpZipLib.dll" target="lib\net45\ICSharpCode.SharpZipLib.dll" />
+        <file src="MetroThingSquirrel\bin\Release\ICSharpCode.SharpZipLib.xml" target="lib\net45\ICSharpCode.SharpZipLib.xml" />
+        <file src="MetroThingSquirrel\bin\Release\MarkdownSharp.dll" target="lib\net45\MarkdownSharp.dll" />
+        <file src="MetroThingSquirrel\bin\Release\MarkdownSharp.pdb" target="lib\net45\MarkdownSharp.pdb" />
+        <file src="MetroThingSquirrel\bin\Release\MarkdownSharp.xml" target="lib\net45\MarkdownSharp.xml" />
+        <file src="MetroThingSquirrel\bin\Release\MetroFramework.dll" target="lib\net45\MetroFramework.dll" />
+        <file src="MetroThingSquirrel\bin\Release\MetroThing.exe" target="lib\net45\MetroThing.exe" />
+        <file src="MetroThingSquirrel\bin\Release\MetroThing.pdb" target="lib\net45\MetroThing.pdb" />
+        <file src="MetroThingSquirrel\bin\Release\MetroThingSquirrel.exe" target="lib\net45\MetroThingSquirrel.exe" />
+        <file src="MetroThingSquirrel\bin\Release\MetroThingSquirrel.exe.config" target="lib\net45\MetroThingSquirrel.exe.config" />
+        <file src="MetroThingSquirrel\bin\Release\MetroThingSquirrel.pdb" target="lib\net45\MetroThingSquirrel.pdb" />
+        <file src="MetroThingSquirrel\bin\Release\Microsoft.Web.XmlTransform.dll" target="lib\net45\Microsoft.Web.XmlTransform.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Mono.Cecil.dll" target="lib\net45\Mono.Cecil.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Mono.Cecil.Mdb.dll" target="lib\net45\Mono.Cecil.Mdb.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Mono.Cecil.Pdb.dll" target="lib\net45\Mono.Cecil.Pdb.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Mono.Cecil.Rocks.dll" target="lib\net45\Mono.Cecil.Rocks.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Newtonsoft.Json.dll" target="lib\net45\Newtonsoft.Json.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Newtonsoft.Json.xml" target="lib\net45\Newtonsoft.Json.xml" />
+        <file src="MetroThingSquirrel\bin\Release\NIdenticon.dll" target="lib\net45\NIdenticon.dll" />
+        <file src="MetroThingSquirrel\bin\Release\NIdenticon.xml" target="lib\net45\NIdenticon.xml" />
+        <file src="MetroThingSquirrel\bin\Release\NuGet.Core.dll" target="lib\net45\NuGet.Core.dll" />
+        <file src="MetroThingSquirrel\bin\Release\RestSharp.dll" target="lib\net45\RestSharp.dll" />
+        <file src="MetroThingSquirrel\bin\Release\RestSharp.xml" target="lib\net45\RestSharp.xml" />
+        <file src="MetroThingSquirrel\bin\Release\Serilog.dll" target="lib\net45\Serilog.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Serilog.Extras.AppSettings.dll" target="lib\net45\Serilog.Extras.AppSettings.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Serilog.Extras.AppSettings.xml" target="lib\net45\Serilog.Extras.AppSettings.xml" />
+        <file src="MetroThingSquirrel\bin\Release\Serilog.FullNetFx.dll" target="lib\net45\Serilog.FullNetFx.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Serilog.FullNetFx.pdb" target="lib\net45\Serilog.FullNetFx.pdb" />
+        <file src="MetroThingSquirrel\bin\Release\Serilog.FullNetFx.xml" target="lib\net45\Serilog.FullNetFx.xml" />
+        <file src="MetroThingSquirrel\bin\Release\Serilog.pdb" target="lib\net45\Serilog.pdb" />
+        <file src="MetroThingSquirrel\bin\Release\Serilog.xml" target="lib\net45\Serilog.xml" />
+        <file src="MetroThingSquirrel\bin\Release\Splat.dll" target="lib\net45\Splat.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Splat.pdb" target="lib\net45\Splat.pdb" />
+        <file src="MetroThingSquirrel\bin\Release\Squirrel.dll" target="lib\net45\Squirrel.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Squirrel.pdb" target="lib\net45\Squirrel.pdb" />
+        <file src="MetroThingSquirrel\bin\Release\Stateless.dll" target="lib\net45\Stateless.dll" />
+        <file src="MetroThingSquirrel\bin\Release\Stateless.xml" target="lib\net45\Stateless.xml" />
+        <file src="MetroThingSquirrel\bin\Release\SyncthingCore.dll" target="lib\net45\SyncthingCore.dll" />
+        <file src="MetroThingSquirrel\bin\Release\SyncthingCore.pdb" target="lib\net45\SyncthingCore.pdb" />
+        <file src="MetroThingSquirrel\bin\Release\SyncthingRestClient.dll" target="lib\net45\SyncthingRestClient.dll" />
+        <file src="MetroThingSquirrel\bin\Release\SyncthingRestClient.pdb" target="lib\net45\SyncthingRestClient.pdb" />
+    </files>
+</package>

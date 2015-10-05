@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D6530C8-8BC5-4920-8108-7004277D2CD0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MetroThing</RootNamespace>
+    <AssemblyName>MetroThing</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gma.QrCodeNet.Encoding">
+      <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="MarkdownSharp">
+      <HintPath>..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\packages\MetroModernUI.1.3.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\MetroModernUI.1.3.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\MetroModernUI.1.3.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="NIdenticon">
+      <HintPath>..\packages\NIdenticon.1.2.1.0\lib\net35-client\NIdenticon.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>..\packages\Serilog.1.4.204\lib\net45\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Extras.AppSettings">
+      <HintPath>..\packages\Serilog.Extras.AppSettings.1.4.204\lib\net45\Serilog.Extras.AppSettings.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.FullNetFx">
+      <HintPath>..\packages\Serilog.1.4.204\lib\net45\Serilog.FullNetFx.dll</HintPath>
+    </Reference>
+    <Reference Include="Stateless">
+      <HintPath>..\packages\Stateless.2.5.11.0\lib\portable-net40+sl50+win+wp80\Stateless.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bindings\NeedBindingItem.cs" />
+    <Compile Include="Bindings\NeedBindingList.cs" />
+    <Compile Include="Controls\ConnectedDevicesTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ConnectedDevicesTile.Designer.cs">
+      <DependentUpon>ConnectedDevicesTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConnectivityTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ConnectivityTile.Designer.cs">
+      <DependentUpon>ConnectivityTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CpuUsageTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CpuUsageTile.Designer.cs">
+      <DependentUpon>CpuUsageTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DeviceQrTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DeviceQrTile.Designer.cs">
+      <DependentUpon>DeviceQrTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DiscoveryTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DiscoveryTile.Designer.cs">
+      <DependentUpon>DiscoveryTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DownloadSpeedTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DownloadSpeedTile.Designer.cs">
+      <DependentUpon>DownloadSpeedTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IdenticonTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\IdenticonTile.Designer.cs">
+      <DependentUpon>IdenticonTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OverallSyncProgressTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OverallSyncProgressTile.Designer.cs">
+      <DependentUpon>OverallSyncProgressTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RamUsageTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RamUsageTile.Designer.cs">
+      <DependentUpon>RamUsageTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SharedFolderFlowItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SharedFolderFlowItemControl.Designer.cs">
+      <DependentUpon>SharedFolderFlowItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SharedFoldersTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SharedFoldersTile.Designer.cs">
+      <DependentUpon>SharedFoldersTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UploadSpeedTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UploadSpeedTile.Designer.cs">
+      <DependentUpon>UploadSpeedTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VersionUpgradeTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\VersionUpgradeTile.Designer.cs">
+      <DependentUpon>VersionUpgradeTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Helpers\FilesystemHelper.cs" />
+    <Compile Include="Core\Helpers\StringHelper.cs" />
+    <Compile Include="Core\Manager\InstallationManager.cs" />
+    <Compile Include="Core\Manager\AppSettings.cs" />
+    <Compile Include="Core\Manager\LocalFolderManager.cs" />
+    <Compile Include="Core\Manager\NetworkTotalsManager.cs" />
+    <Compile Include="Core\Manager\SyncthingInstanceManager.cs" />
+    <Compile Include="Core\SettingsSnapshot.cs" />
+    <Compile Include="Core\UserInputValidator.cs" />
+    <Compile Include="Forms\ChangelogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangelogForm.Designer.cs">
+      <DependentUpon>ChangelogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NeedQueueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NeedQueueForm.Designer.cs">
+      <DependentUpon>NeedQueueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OpenSharedFolderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OpenSharedFolderForm.Designer.cs">
+      <DependentUpon>OpenSharedFolderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddInstanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddInstanceForm.Designer.cs">
+      <DependentUpon>AddInstanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\InstanceFlowItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InstanceFlowItemControl.Designer.cs">
+      <DependentUpon>InstanceFlowItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Types\Singleton.cs" />
+    <Compile Include="Types\Validation\ValidationResult.cs" />
+    <EmbeddedResource Include="Controls\ConnectedDevicesTile.resx">
+      <DependentUpon>ConnectedDevicesTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ConnectivityTile.resx">
+      <DependentUpon>ConnectivityTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CpuUsageTile.resx">
+      <DependentUpon>CpuUsageTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DeviceQrTile.resx">
+      <DependentUpon>DeviceQrTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DiscoveryTile.resx">
+      <DependentUpon>DiscoveryTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DownloadSpeedTile.resx">
+      <DependentUpon>DownloadSpeedTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\IdenticonTile.resx">
+      <DependentUpon>IdenticonTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OverallSyncProgressTile.resx">
+      <DependentUpon>OverallSyncProgressTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RamUsageTile.resx">
+      <DependentUpon>RamUsageTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SharedFolderFlowItemControl.resx">
+      <DependentUpon>SharedFolderFlowItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SharedFoldersTile.resx">
+      <DependentUpon>SharedFoldersTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UploadSpeedTile.resx">
+      <DependentUpon>UploadSpeedTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\VersionUpgradeTile.resx">
+      <DependentUpon>VersionUpgradeTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddInstanceForm.resx">
+      <DependentUpon>AddInstanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangelogForm.resx">
+      <DependentUpon>ChangelogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NeedQueueForm.resx">
+      <DependentUpon>NeedQueueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OpenSharedFolderForm.resx">
+      <DependentUpon>OpenSharedFolderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Controls\InstanceFlowItemControl.resx">
+      <DependentUpon>InstanceFlowItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\MetroThing.Bindings.NeedBindingList.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SyncthingCore\SyncthingCore.csproj">
+      <Project>{251237f4-ba3b-45fb-a31a-d036247f9b81}</Project>
+      <Name>SyncthingCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SyncthingRestClient\SyncthingRestClient.csproj">
+      <Project>{09a149a1-14c6-4435-807d-c99a7c9a6a3b}</Project>
+      <Name>SyncthingRestClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_updown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_latency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_negative.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_positive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_unlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_100_bright_folder_closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_100_bright_devices.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_discovery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_smiley_sad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_heart_beat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_github.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_folder_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_rescan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontawesome_50_bright_bump.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
